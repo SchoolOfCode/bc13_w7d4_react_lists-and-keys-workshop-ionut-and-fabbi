@@ -10,8 +10,8 @@ function Main() {
   const [posts, setPosts] = useState(samplePosts);
 
   return <main id="main">
-    {posts.map(({text, postId}) => {
-     return <Post post={text} key={postId}></Post>
+    {posts.map(({text, postId, title, date, author, highlights, image}) => {
+     return <Post body={text} key={postId} title={title} date={date} author={author} highlights={highlights} image={image}></Post>
     })}
   </main>;
 }
