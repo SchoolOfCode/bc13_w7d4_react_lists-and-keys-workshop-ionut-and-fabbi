@@ -7,9 +7,11 @@ function Post({body, title, date, author, highlights, image}) {
     <h1>{title}</h1>
     <p>{author}</p>
     <p>{date}</p>
-    <p>{highlights}</p>
-    <img src = {image.link} alt={image.alt}></img>
     <p>{body}</p>
+    {highlights.map((highlight, index) => {
+      return <li key={index}>{highlight}</li>
+    })}
+    <img src = {image.link} alt={image.alt}></img>
   </article>
 }
 
