@@ -9,7 +9,11 @@ import Post from '../Post';
 function Main() {
   const [posts, setPosts] = useState(samplePosts);
 
-  return <main id="main"></main>;
+  return <main id="main">
+    {posts.map(({text}) => {
+     return <Post post={text}></Post>
+    })}
+  </main>;
 }
 
 export default Main;
